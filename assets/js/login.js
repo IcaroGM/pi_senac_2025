@@ -13,21 +13,17 @@ document.querySelector(".login-form").addEventListener("submit", async (e) => {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(body),
+      credentials: "include",
     });
 
-    let data = {};
+    let data = {}; // só tenta ler JSON se a resposta tiver conteúdo
 
-    // só tenta ler JSON se a resposta tiver conteúdo
     if (response.status !== 204) {
       data = await response.json();
-    }
+    } // PONTOS DE TESTE (Corretamente dentro do escopo)
 
     if (response.ok) {
       alert("Login realizado com sucesso!");
-
-      if (data.token) {
-        localStorage.setItem("token", data.token);
-      }
 
       window.location.href = "telainicial.html";
     } else {
@@ -38,3 +34,5 @@ document.querySelector(".login-form").addEventListener("submit", async (e) => {
     alert("Erro ao conectar com o servidor.");
   }
 });
+
+// A linha problemática *anterior* foi removida daqui!
