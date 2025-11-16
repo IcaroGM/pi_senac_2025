@@ -1,7 +1,7 @@
 CREATE DATABASE IF NOT EXISTS cantinho_pet;
 USE cantinho_pet;
 
-CREATE TABLE usuarios (
+CREATE TABLE users (
   id_usuario INT AUTO_INCREMENT PRIMARY KEY,
   nome VARCHAR(100) NOT NULL,
   email VARCHAR(100) UNIQUE NOT NULL,
