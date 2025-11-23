@@ -213,3 +213,108 @@ td {
     font-weight: bold;
     cursor: pointer;
 }
+
+
+@media (max-width: 900px) {
+
+    .top-actions {
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+        margin: 20px 10px; 
+    }
+
+    .btn-venda,
+    .btn-outras {
+        width: 90%; 
+        max-width: 350px;
+        text-align: center;
+    }
+
+    .filtro-pesquisa {
+        width: 90%; 
+        margin-left: 0;
+        justify-content: center;
+        align-items: center; 
+        
+        display: flex; 
+        flex-direction: row; 
+        gap: 5px;
+        background-color: transparent;
+    }
+    
+    .filtro-pesquisa input[type="text"] {
+        width: 70%;
+        max-width: 250px;
+    }
+
+    .dropdown {
+        flex-shrink: 0;
+    }
+
+    .tabela {
+        display: block; 
+        overflow-x: auto; 
+        white-space: nowrap; 
+        width: 98%; 
+        margin: 10px auto;
+        border-radius: 5px;
+    }
+
+    .tabela th,
+    .tabela td {
+        padding: 8px 10px;
+        font-size: 0.85rem;
+    }
+    
+    .lapiz {
+        width: 25px;
+        height: 25px;
+    }
+
+    .circle {
+        width: 15px;
+        height: 15px;
+        margin: 0 auto;
+    }
+
+    .popup-content,
+    .popup-box {
+        width: 90%;
+        max-width: 320px;
+        padding: 20px;
+    }
+
+    .popup-box input {
+        box-sizing: border-box; 
+    }
+
+    .btns {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .btn-cancelar,
+    .btn-salvar {
+        width: 100%;
+        max-width: none;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    
+    .filtro-pesquisa {
+        width: 100%;
+        padding: 0 5px;
+    }
+    
+    .filtro-pesquisa input[type="text"] {
+        width: 100%;
+    }
+
+    .dropdown-conteudo {
+        left: 0;
+        right: auto;
+    }
+}

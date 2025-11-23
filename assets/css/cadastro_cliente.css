@@ -117,6 +117,7 @@ font-weight: bold;
   transition: 0.3s;
   width: 100%;
   max-width: 200px;
+  margin-top: 20px;
 }
 
 .botao-pet:hover {

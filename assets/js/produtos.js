@@ -1,13 +1,11 @@
 document.addEventListener("DOMContentLoaded", async () => {
   const tabelaBody = document.querySelector("tbody");
 
-  // MODAL EXCLUSÃO
   const modalExcluir = document.getElementById("modal-excluir");
   const cancelarModal = document.getElementById("cancelar-modal");
   const formExcluir = document.getElementById("form-excluir");
   const inputIdExcluir = document.getElementById("id-excluir");
 
-  // MODAL EDIÇÃO
   const modalEditar = document.getElementById("modal-editar");
   const cancelarEdicao = document.getElementById("cancelar-edicao");
   const formEditar = document.getElementById("form-editar");
@@ -20,9 +18,6 @@ document.addEventListener("DOMContentLoaded", async () => {
   const editGrupo = document.getElementById("edit-grupo");
   const editPreco = document.getElementById("edit-preco");
 
-  // ================================
-  // 1. CARREGAR PRODUTOS
-  // ================================
   async function carregarProdutos() {
     try {
       const response = await fetch("http://localhost:3005/api/produtos", {
@@ -60,13 +55,9 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   await carregarProdutos();
 
-  // ================================
-  // 2. DELEGAÇÃO DE EVENTOS (EDITAR / EXCLUIR)
-  // ================================
   tabelaBody.addEventListener("click", async (e) => {
     const btn = e.target;
 
-    // EDITAR =====================================
     if (btn.classList.contains("btn-atualizar")) {
       const id = btn.dataset.id;
 
@@ -92,7 +83,6 @@ document.addEventListener("DOMContentLoaded", async () => {
       modalEditar.style.display = "flex";
     }
 
-    // EXCLUIR =====================================
     if (btn.classList.contains("btn-excluir")) {
       const id = btn.dataset.id;
 
@@ -106,9 +96,6 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
   });
 
-  // ================================
-  // 3. FECHAR MODAL DE EXCLUSÃO
-  // ================================
   cancelarModal.onclick = () => {
     modalExcluir.style.display = "none";
   };
@@ -117,9 +104,6 @@ document.addEventListener("DOMContentLoaded", async () => {
     if (e.target === modalExcluir) modalExcluir.style.display = "none";
   });
 
-  // ================================
-  // 4. CONFIRMAR EXCLUSÃO
-  // ================================
   formExcluir.addEventListener("submit", async (e) => {
     e.preventDefault();
 
@@ -139,9 +123,6 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
   });
 
-  // ================================
-  // 5. FECHAR MODAL DE EDIÇÃO
-  // ================================
   cancelarEdicao.onclick = () => {
     modalEditar.style.display = "none";
   };
@@ -150,9 +131,6 @@ document.addEventListener("DOMContentLoaded", async () => {
     if (e.target === modalEditar) modalEditar.style.display = "none";
   });
 
-  // ================================
-  // 6. SALVAR EDIÇÃO (PUT)
-  // ================================
   formEditar.addEventListener("submit", async (e) => {
     e.preventDefault();
 

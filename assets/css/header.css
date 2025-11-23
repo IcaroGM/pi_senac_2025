@@ -127,3 +127,67 @@ header {
     width: 80%;
   }
 }
+
+@media (max-width: 768px) {
+
+  header {
+    padding: 10px 15px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .titulo {
+    flex: 100%;
+    order: 2;
+    font-size: 1.1rem;
+    margin-top: 8px;
+  }
+
+  .infos {
+    gap: 10px;
+  }
+
+  .empresa {
+    display: none;
+  }
+
+  .data {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+
+  header {
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .logo {
+    font-size: 1rem;
+    padding: 8px 12px;
+  }
+
+  .infos {
+    width: 100%;
+    justify-content: space-between;
+    display: flex;
+  }
+
+  .data {
+    font-size: 0.8rem;
+  }
+
+  .usuario {
+    display: none;
+  }
+
+  .menu {
+    font-size: 1.6rem;
+  }
+
+  #sideMenu {
+    width: 85%;
+  }
+}

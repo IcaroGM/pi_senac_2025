@@ -4,7 +4,6 @@ document.addEventListener("DOMContentLoaded", () => {
   form.addEventListener("submit", async (e) => {
     e.preventDefault();
 
-    // PEGANDO OS CAMPOS
     const dados = {
       codigo: document.getElementById("codBarras").value,
       nome: document.getElementById("nomeProduto").value,
@@ -30,7 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
 
       alert("Produto cadastrado com sucesso!");
-      form.reset(); // limpar os campos
+      form.reset();
     } catch (error) {
       console.error("Erro:", error);
       alert("Erro ao conectar com a API.");

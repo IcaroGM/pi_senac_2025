@@ -14,17 +14,14 @@ async function carregarOpcoes() {
 
     const selectSetor = document.getElementById("setor");
 
-    // garante que é um array de setores
     const setores = data.setores || data || [];
 
-    // limpa opções atuais
     selectSetor.innerHTML = '<option value="">Selecione um setor</option>';
 
-    // cria option para cada setor
     setores.forEach((setor) => {
       const option = document.createElement("option");
-      option.value = setor.id; // se quiser o id
-      option.textContent = setor.nome; // se o campo for "nome"
+      option.value = setor.id;
+      option.textContent = setor.nome;
       selectSetor.appendChild(option);
     });
   } catch (err) {
@@ -38,7 +35,6 @@ document.addEventListener("DOMContentLoaded", () => {
   form.addEventListener("submit", async (e) => {
     e.preventDefault();
 
-    // PEGANDO OS CAMPOS
     const dados = {
       nome: document.getElementById("nome").value,
       descricao: document.getElementById("descricao").value,
@@ -64,7 +60,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
 
       alert("Grupos cadastrado com sucesso!");
-      form.reset(); // limpar os campos
+      form.reset();
     } catch (error) {
       console.error("Erro:", error);
       alert("Erro ao conectar com a API.");
@@ -87,7 +83,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     const grupos = await response.json();
 
-    tabelaBody.innerHTML = ""; // limpa a tabela inicial
+    tabelaBody.innerHTML = "";
 
     grupos.forEach((p) => {
       const tr = document.createElement("tr");

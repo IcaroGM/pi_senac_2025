@@ -131,6 +131,17 @@ body {
     color: white;
 }
 
+.troca-nome {
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: 0.3s;
+  font-size: 1rem;
+}
+
 
 .popup {
     display: none;
@@ -271,4 +282,151 @@ font-weight: bold;
   display: block;
   font-size: 0.9rem;
   padding: 4px 0;
+}
+
+
+@media (max-width: 900px) {
+
+    .top-actions {
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
+    }
+
+    .voltar {
+        align-self: flex-start;
+    }
+
+    .btn-venda,
+    .btn-outras {
+        width: 100%;
+        max-width: 350px;
+        text-align: center;
+    }
+
+
+    .filtro-pesquisa {
+        width: 100%;
+        justify-content: center;
+        margin-top: 10px;
+        flex-wrap: nowrap;
+        
+        display: flex;
+        align-items: center; 
+        gap: 5px;
+        padding: 0 10px;
+    }
+
+    .filtro-pesquisa input[type="text"] {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .dropdown {
+        width: auto;
+        display: block;
+    }
+
+    .linha {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .linha input {
+        width: 100%;
+    }
+
+    #campoNomeNF {
+        width: 100%;
+    }
+
+    #campoNomeNF input {
+        width: 100%;
+    }
+
+    .produtos {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+        border-radius: 10px;
+    }
+
+    .produtos th,
+    .produtos td {
+        padding: 10px;
+        font-size: 13px;
+    }
+
+    .bottom-actions {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .cancelar,
+    .salvar {
+        width: 100%;
+        max-width: 300px;
+        text-align: center;
+    }
+
+    .btn-pagamento {
+        width: 100%;
+        max-width: 350px;
+        text-align: center;
+    }
+
+    .popup-content {
+        width: 90%;
+        max-width: 350px;
+    }
+
+    .popup-content input,
+    .popup-content select {
+        width: 100%;
+    }
+
+    .popup-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .btn-red,
+    .btn-green {
+        width: 100%;
+    }
+}
+
+
+@media (max-width: 400px) {
+
+    .btn-venda,
+    .btn-outras {
+        max-width: 280px;
+    }
+
+    .btn-pagamento {
+        max-width: 280px;
+    }
+
+    .bottom-actions button {
+        max-width: 260px;
+    }
+
+    .top-actions {
+        margin: 10px;
+    }
+
+    .linha label {
+        width: 100%;
+        text-align: left;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .troca-nome {
+        white-space: nowrap;
+    }
 }
