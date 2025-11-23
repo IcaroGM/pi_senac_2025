@@ -1,7 +1,6 @@
-# # 2º entrega do Projeto Integrador Grupo 26 
+## 2º entrega do Projeto Integrador Grupo 26 
 
 Este projeto tem por objetivo atender as demandas do quarto semestre da disciplina de Projeto Integrador: Desenvolvimento de sistemas orientado a Dispositivos Móveis e Baseados na Web 
----
 
 
 ## Integrantes do grupo e suas equipes:
@@ -54,8 +53,9 @@ new-repositorio/
 │ └── js # Contem os arquivos javaScrit do projeto 
 │
 ├── back-end/
-│ └── css # Contem os arquivos CSS do projeto 
-│ └── css # Contem os arquivos CSS do projeto 
+│ └── .vs # Contem os arquivos de cache do banco de dados e utiliza Node.js
+│   └── js # Contem os arquivos javaScrit do projeto 
+│ └── scr # Contem os arquivos CSS do projeto 
 │
 ├── .cadastro_cliente/ 
 │ └── HTML da Página de Clientes 
